@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="5.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>설문지</h1>
+        <p>소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.</p>
+    </header>
+    <hr>
+    <section>
+        <form name="selgrade">
+            <label>학년</label> &nbsp; &nbsp;
+            <input type="radio" name="grade" value="1"> 1학년 
+            <input type="radio" name="grade" value="2"> 2학년 
+            <input type="radio" name="grade" value="3"> 3학년 
+            <input type="radio" name="grade" value="4"> 4학년 
+        </form>
+        <br>
+        <form name="selgen">
+            <label>성별</label> &nbsp; &nbsp;
+            <input type="radio" name="gen" value="m"> 남자 
+            <input type="radio" name="gen" value="f"> 여자
+        </form>
+        <br>
+        <form name="selint">
+            <label>관심 분야</label> &nbsp; &nbsp;
+            <select name="interest">
+                <option value="1">모바일 소프트웨어</option>
+                <option value="2">웹 개발</option>
+            </select>
+        </form>
+        <br>
+        <form name="jinro">
+            <label>진로(다중 선택)</label> &nbsp; &nbsp;
+            <input type="checkbox" value="1"> 개발 
+            <input type="checkbox" value="2"> 기획 
+            <input type="checkbox" value="3"> 영업 
+            <input type="checkbox" value="4"> 창업 
+        </form>
+        <br>
+        <form name="msg">
+            <label>남기고 싶은 말</label> &nbsp; &nbsp;
+            <textarea placeholder="글을 남겨주세요." style="width: 400px; height: 200px;"></textarea>
+        </form>
+    </section>
+    <br>
+    <footer>Copyright 2022 by Kitae</footer>
+</body>
+</html>
