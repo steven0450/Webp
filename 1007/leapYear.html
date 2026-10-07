@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윤년 판별</title>
+    <style>
+        body {
+            display: grid;
+            min-height: 100vh;
+            margin: 0;
+            place-items: center;
+            background: #f4f7f2;
+            color: #26352b;
+            font-family: Arial, "Malgun Gothic", sans-serif;
+        }
+
+        main {
+            width: min(420px, calc(100% - 40px));
+            padding: 36px;
+            border: 1px solid #e0e8df;
+            border-radius: 18px;
+            background: white;
+            box-shadow: 0 12px 35px #26352b12;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+        }
+
+        p {
+            color: #68766c;
+            line-height: 1.7;
+        }
+
+        button {
+            margin-top: 12px;
+            padding: 13px 22px;
+            border: 0;
+            border-radius: 9px;
+            background: #42684d;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #35583f;
+        }
+
+        #result {
+            margin-top: 22px;
+            color: #355d3d;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>윤년 판별하기</h1>
+        <p>버튼을 누르고 연도를 입력하면 윤년인지 확인할 수 있어요.</p>
+        <button type="button" id="check-year">연도 입력하기</button>
+        <p id="result" aria-live="polite"></p>
+    </main>
+
+    <script>
+        const checkButton = document.querySelector("#check-year");
+        const result = document.querySelector("#result");
+
+        checkButton.addEventListener("click", () => {
+            const input = prompt("확인할 연도를 입력하세요.");
+
+            if (input === null) {
+                result.textContent = "입력이 취소되었습니다.";
+                return;
+            }
+
+            const year = Number(input.trim());
+            if (input.trim() === "" || !Number.isSafeInteger(year) || year < 1) {
+                result.textContent = "1 이상의 올바른 연도를 입력해 주세요.";
+                return;
+            }
+
+            const isLeapYear = year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0);
+            result.textContent = `${year}년은 ${isLeapYear ? "윤년" : "평년"}입니다.`;
+        });
+    </script>
+</body>
+</html>
