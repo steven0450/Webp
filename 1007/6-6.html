@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>변수 선언, 전역/지역/블록 변수</h2>
+    <hr>
+    <script>
+        let x; // 전역 변수, var로 해도 됨
+        function f() {
+            let y; // f 내에서만 사용하는 지역 변수
+            x = 10; // 전역 변수 x에 값 할당
+            y = 20; // 지역 변수 y에 값 할당
+            z = 30; // 새로운 전역 변수 z 생성
+
+            if (y == 20) {
+                let b = 40; // if 블록 내에서만 사용하는 블록 변수
+                b++;
+                document.write("if 내 블록 변수 b: " + b + "<br>");
+            }
+            // 블록 밖에서는 b를 사용할 수 없음
+            // 이곳에서는 x, y, z 모두 사용 가능
+            document.write("함수 f 내 지역 변수 y: " + y + "<br>");
+        }
+
+        f(); // 함수 f 호출
+        document.write("전역 변수 x: " + x + "<br>");
+        document.write("전역 변수 z: " + z + "<br>");
+        // 이곳에서는 x, z는 사용 가능하지만 b, y는 사용할 수 없음
+    </script>
+
+</body>
+
+</html>
