@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #game {
+            width: 200px;
+            height: 80px;
+            background-color: bisque;
+            border: 1px solid burlywood;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .gspan {
+            width: 70px;
+            text-align: center;
+            font-size: 65px;
+            cursor: pointer;
+            font-style: italic;
+            color: blue;
+        }
+
+        .res {
+            margin-top: 5px;
+            color: purple;
+            font-style: italic;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>겜블링 게임</h1>
+    <p>
+        각 숫자를 클릭하면 0에서 2 사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.
+    </p>
+    <hr>
+    <script>
+        let cnt = 0;
+
+        function play(obj) {
+            obj.innerHTML = Math.floor(Math.random() * 3);
+            cnt++;
+
+            if (cnt === 3) {
+                let span = document.querySelectorAll(".gspan");
+                let res = document.querySelector(".res");
+
+                if (span[0].innerHTML === span[1].innerHTML && span[1].innerHTML === span[2].innerHTML) {
+                    res.innerHTML = "Success(Click here to do again)";
+                } else {
+                    res.innerHTML = "Fail(Click here to do again)";
+                }
+            }
+        }
+
+        function reset() {
+            let span = document.querySelectorAll(".gspan");
+
+            span[0].innerHTML = "0"; span[1].innerHTML = "0"; span[2].innerHTML = "0";
+
+            document.querySelector(".res").innerHTML = "";
+            cnt = 0;
+        }
+    </script>
+
+    <div id="game">
+        <span class="gspan" onclick="play(this)">0</span>
+        <span class="gspan" onclick="play(this)">0</span>
+        <span class="gspan" onclick="play(this)">0</span>
+    </div>
+    <div class="res" onclick="reset()"></div>
+</body>
+
+</html>
