@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("image/sky.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        div.snow {
+            position: absolute;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const n = 30;
+        let snows = [];
+
+        function getWidth() {
+            return window.innerWidth;
+        }
+
+        function getHeight() {
+            return window.innerHeight;
+        }
+
+        for (let i = 0; i < n; i++) {
+            let snow = document.createElement("div");
+            snow.className = "snow";
+            snow.innerHTML = "❄";
+            snow.style.left = Math.random() * getWidth() + "px";
+            snow.style.top = Math.random() * getHeight() + "px";
+            document.body.appendChild(snow);
+            snows.push(snow);
+        }
+
+        function fall() {
+            for (let i = 0; i < n; i++) {
+                let snow = snows[i];
+                let top = parseFloat(snow.style.top);
+                top += 1;
+                if (top > getHeight()) {
+                    top = -20;
+                    snow.style.left = Math.random() * getWidth() + "px";
+                }
+                snow.style.top = top + "px";
+            }
+        }
+
+        setInterval(fall, 100);
+    </script>
+</body>
+</html>
