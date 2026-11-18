@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven Park | Portfolio</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- 1. Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Steven.log</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#academic">Academic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section (Full-Screen) -->
+    <header
+        class="hero-section d-flex align-items-center justify-content-center text-center bg-dark text-white position-relative overflow-hidden">
+        <div class="container hero-content">
+            <span class="text-primary fw-bold fs-5 mb-2 d-block tracking-wider">Hello, I'm</span>
+            <h1 class="display-3 fw-bold mb-3">박호영 <span class="text-secondary fs-4"> / Steven Park</span></h1>
+            <p class="lead text-secondary mb-4">시스템과 소프트웨어의 원리를 탐구하며 가치를 만들어내는 소프트웨어 전공자입니다.</p>
+            <div class="mt-4">
+                <a href="#projects" class="btn btn-light btn-lg me-2 px-4 shadow-sm">프로젝트 보기</a>
+                <a href="https://github.com/steven0450" target="_blank"
+                    class="btn btn-outline-light btn-lg px-4">GitHub</a>
+            </div>
+        </div>
+        <!-- 아래로 스크롤 유도 화살표 (바운스 애니메이션 적용) -->
+        <div class="position-absolute bottom-0 mb-4 hero-bounce">
+            <a href="#about" class="text-secondary text-decoration-none fs-4">↓</a>
+        </div>
+    </header>
+
+    <!-- 3. About & Development Environment -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="mb-4 fw-bold">About Me</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="p-4 bg-light rounded-3 h-100 border">
+                        <h4 class="text-primary mb-3">Core Identity</h4>
+                        <p>컴퓨터 구조와 소프트웨어 작동 방식에 흥미를 느끼며, 탄탄한 기본기를 바탕으로 문제를 해결하는 데 집중하고 있습니다.</p>
+                        <p class="mb-0 text-muted small">학업과 다양한 실습을 통해 이론과 실무의 균형을 맞추어 나가고 있습니다.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 bg-light rounded-3 h-100 border">
+                        <h4 class="text-primary mb-3">💻 Development Environment</h4>
+                        <ul class="list-unstyled text-secondary small mb-0">
+                            <li class="mb-2">• <strong>MacBook Air (M1)</strong> : 메인 개발 및 시스템 환경</li>
+                            <li class="mb-2">• <strong>Debian (GNOME)</strong> : 서브 작업 및 교차 테스트 머신</li>
+                            <li>• <strong>Tools</strong> : VS Code, Git / GitHub, Linux Terminal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Skills & Tools -->
+    <section id="skills" class="py-5 bg-light border-top border-bottom">
+        <div class="container">
+            <h2 class="mb-4 fw-bold">Skills & Stack</h2>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded-3 border h-100">
+                        <h5 class="fw-bold mb-3">Languages</h5>
+                        <span class="badge bg-dark me-1 mb-1">C</span>
+                        <span class="badge bg-dark me-1 mb-1">Java</span>
+                        <span class="badge bg-dark me-1 mb-1">Python</span>
+                        <span class="badge bg-dark me-1 mb-1">HTML/CSS</span>
+                        <span class="badge bg-dark me-1 mb-1">JavaScript</span>
+                        <span class="badge bg-dark me-1 mb-1">Assembly</span>
+                        <span class="badge bg-dark me-1 mb-1">SQL</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded-3 border h-100">
+                        <h5 class="fw-bold mb-3">Version Control</h5>
+                        <span class="badge bg-secondary me-1 mb-1">Git</span>
+                        <span class="badge bg-secondary me-1 mb-1">GitHub</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded-3 border h-100">
+                        <h5 class="fw-bold mb-3">Environment</h5>
+                        <span class="badge bg-secondary me-1 mb-1">macOS</span>
+                        <span class="badge bg-secondary me-1 mb-1">Linux</span>
+                        <span class="badge bg-secondary me-1 mb-1">VS Code</span>
+                        <span class="badge bg-secondary me-1 mb-1">Eclipse</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic & Certifications Section -->
+    <section id="academic" class="py-5 bg-light border-top">
+        <div class="container">
+            <h2 class="mb-4 fw-bold">Academic & Certifications</h2>
+            <div class="row g-4">
+
+                <!-- Education (학력) -->
+                <div class="col-md-6"> <!-- 혹은 col-md-6에서 양쪽 균형 맞추기 -->
+                    <div class="p-4 bg-white rounded-3 border h-100 shadow-sm">
+                        <h4 class="text-primary mb-3">🎓 Education & Background</h4>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-3 pb-3 border-bottom">
+                                <h5 class="fw-bold mb-1">경성대학교 소프트웨어학과</h5>
+                                <p class="text-muted small mb-2">2025년 입학 · 재학 중</p>
+                                <p class="text-secondary small mb-0">
+                                    컴퓨터 구조, 자료구조 및 전공 심화 과정을 통해 소프트웨어 공학의 기초를 탄탄히 다지고 있습니다.
+                                </p>
+                            </li>
+                            <li>
+                                <h5 class="fw-bold mb-1">금샘고등학교 전자컴퓨터과</h5>
+                                <p class="text-muted small mb-2">2022년 입학 · 2025년 졸업</p>
+                                <p class="text-secondary small mb-0">
+                                    일찍이 전자와 컴퓨터 시스템의 동작 원리에 눈을 뜨며, IT 분야의 기술적 기반을 다졌습니다.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Certifications (자격증) -->
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-3 border h-100 shadow-sm">
+                        <h4 class="text-primary mb-3">📜 Certifications</h4>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                                <div>
+                                    <h6 class="fw-bold mb-0">정보기기운용기능사</h6>
+                                    <span class="text-muted small">네트워크 및 시스템 운용 소양</span>
+                                </div>
+                                <span class="badge bg-dark">취득</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                                <div>
+                                    <h6 class="fw-bold mb-0">정보처리기능사 (과정평가형)</h6>
+                                    <span class="text-muted small">소프트웨어 개발 및 실무 기초</span>
+                                </div>
+                                <span class="badge bg-dark">취득</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                                <div>
+                                    <h6 class="fw-bold mb-0">GTQ 2급 (그래픽기술자격)</h6>
+                                    <span class="text-muted small">디지털 디자인 및 그래픽 편집 소양</span>
+                                </div>
+                                <span class="badge bg-dark">취득</span>
+                            </li>
+                            <li class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="fw-bold mb-0">DIAT / ITQ</h6>
+                                    <span class="text-muted small">컴퓨터 활용 능력 및 정보 소양</span>
+                                </div>
+                                <span class="badge bg-dark">취득</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="mb-4 fw-bold">Projects</h2>
+            <div class="row g-4">
+                <!-- 프로젝트 카드 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">프로젝트 이름 1</h5>
+                            <h6 class="card-subtitle mb-2 text-muted small">2026.03 - 진행 중</h6>
+                            <p class="card-text mt-3">프로젝트에 대한 간단한 설명과 주요 기능, 본인이 기여한 역할을 작성하는 공간입니다.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark border">Java</span>
+                                <span class="badge bg-light text-dark border">Git</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-dark btn-sm">GitHub 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 프로젝트 카드 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">프로젝트 이름 2</h5>
+                            <h6 class="card-subtitle mb-2 text-muted small">2025.09 - 2025.12</h6>
+                            <p class="card-text mt-3">문제 해결 과정(Troubleshooting)이나 기술적 도전 과제를 간략하게 녹여내어 완성도를 높입니다.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark border">C</span>
+                                <span class="badge bg-light text-dark border">Linux</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-dark btn-sm">GitHub 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Contact Section -->
+    <section id="contact" class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h2 class="mb-3 fw-bold">Contact Me</h2>
+            <p class="text-secondary mb-4">궁금한 점이 있으시다면 언제든 연락주세요.</p>
+            <p class="mb-1">📧 Email: steven04501@naver.com</p>
+            <p>🔗 GitHub: <a href="https://github.com/steven0450" target="_blank"
+                    class="text-light">github.com/steven0450</a></p>
+            <footer class="mt-5 text-muted small">
+                &copy; 2026 Steven Park. All rights reserved.
+            </footer>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
