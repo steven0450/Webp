@@ -3,7 +3,7 @@
 > 시스템과 소프트웨어의 원리를 탐구하는 소프트웨어 전공자 박호영의 개인 포트폴리오 웹사이트입니다.
 
 ## 🌐 Live URL
-* **Domain:** [stevenpark.kro.kr](https://stevenpark.kro.kr) (GitHub Pages 리다이렉트 연동)
+* **Domain:** [stevenpark.kro.kr](http://stevenpark.kro.kr) (GitHub Pages 리다이렉트 연동)
 
 ## 📌 About Project
 * **소속:** 경성대학교 소프트웨어학과 재학 / 금샘고등학교 전자컴퓨터과 졸업
